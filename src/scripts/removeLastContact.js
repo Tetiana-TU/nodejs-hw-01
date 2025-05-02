@@ -3,8 +3,8 @@ import { writeContacts } from '../utils/writeContacts.js';
 
 export const removeLastContact = async () => {
   try {
-    const contacts = readContacts();
-    if (contacts.langth === 0) {
+    const contacts = await readContacts();
+    if (contacts.length === 0) {
       return;
     }
     const removed = contacts.pop();
